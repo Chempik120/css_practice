@@ -1,0 +1,22 @@
+@import './variables';
+@import './player';
+
+body{
+    margin: 0;
+    font-family: Arial;
+    font-weight: 700;
+}
+
+.athletes{
+  display: grid;
+  grid-template-columns: repeat(4, 200px); 
+  gap: 40px 30px;
+  justify-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 750px) {
+    .athletes{
+        grid-template-columns: repeat(2, 200px); 
+    } 
+}
