@@ -1,0 +1,70 @@
+.athlete-card{
+    z-index: 1;
+    width: auto;
+    height: auto;
+    color: $card-main-color;
+    box-sizing: border-box;
+    transition: background-color 1s ease, transform 1s ease, z-index 0s linear;
+
+    &__photo-container{
+    position: relative;
+    width: $card-width;
+    height: 200px;
+    margin-bottom: 8px;
+}
+
+&__photo{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    transition: border-radius 1s ease;
+}
+
+&__rank{
+    position: absolute;
+    top: 40%;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: $card-second-color;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+&__details{
+    text-align: center;
+}
+
+&__extra{
+    display: none;
+}
+
+    &:hover{
+        background-color: #EEEEEE;
+        border-radius: 12px;
+        padding: 12px 12px 19px 12px;
+        transition-duration: 1s;
+        transform: scale(1.1);
+        z-index: 10;
+        .athlete-card__extra{
+            display: block;
+            color: #000000;
+            font-weight: 400;
+            font-size: 21.6px;
+            line-height: 100%;
+            margin-top: 10px;
+        }
+
+        .athlete-card__photo{
+            border-radius: 60px;
+            transition-duration: 1s;
+        }
+
+    }
+}
